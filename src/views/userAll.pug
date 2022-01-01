@@ -1,0 +1,12 @@
+extends _template.pug
+
+block nav
+	li.nav-item: a(href="/" class="nav-link") Inicio
+	li.nav-item: a(href="/u/create" class="nav-link") Crear usuario
+
+block main
+	h4 Usuarios creados #{val.users.length}
+	each u in val.users
+		.card 
+			.card-body
+				h5.card-title #{u.first_name} #{u.last_name}

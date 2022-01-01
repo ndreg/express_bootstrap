@@ -1,0 +1,11 @@
+extends _template.pug
+
+block nav
+	li.nav-item: a(href="/" class="nav-link") Inicio
+	li.nav-item: a(href="/u/all" class="nav-link") Ver usuario
+
+block main
+	form(action='/u/create' method="POST" class="mb-3")
+		input(type="text" class="form-control mb-3" name="first_name" id="first_name" placeholder="Ingresa tu nombre")
+		input(type="text" class="form-control mb-3" name="last_name" id="last_name" placeholder="Ingresa tu apellido")
+		input(type="submit" value="Crear" class="btn btn-primary")
